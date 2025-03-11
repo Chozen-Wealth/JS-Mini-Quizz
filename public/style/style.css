@@ -6,15 +6,15 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
+    width: 100vw;
 }
 
 header {
     height: 100px;
     width: 100%;
-    padding: 10px;
     background-color: rgba(220, 220, 220, 0.5);
     display: flex;
-    justify-content: ;
+    justify-content: start;
     align-items: center;
 }
 
@@ -34,6 +34,7 @@ footer {
 
 h1 {
     margin: 0;
+    margin-left: 20px;
 }
 
 p {
