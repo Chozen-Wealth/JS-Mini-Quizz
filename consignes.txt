@@ -1,0 +1,17 @@
+Mini Quizz en Javascript
+
+Nom : JS-Mini-Quizz
+Thème : 
+Questions : Minimum 10
+Affichage du score : 
+
+Présentation de la page
+    Titre principal
+    Header
+    Footer
+Stockage du projet sur GitHub : Minimum 10 Commits
+
+Le quizz démarre et pose les questions.
+Les réponses sont écrites par l'utilisateur dans la console
+Les points sont comptés.
+A la fin du jeu : Alerte avec le score et la fin du Quizz
