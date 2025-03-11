@@ -1,15 +1,26 @@
 body {
     margin: 0;
     padding: 0;
+    background-image: url(../assets/images/Kakashi1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 
 header {
-    height: 300px;
+    height: 100px;
     width: 100%;
-    background-color: gainsboro;
+    padding: 10px;
+    background-color: rgba(220, 220, 220, 0.5);
     display: flex;
-    justify-content: center;
+    justify-content: ;
     align-items: center;
+}
+
+section {
+    height: 500px;
+    width: 100%;
 }
 
 footer {
