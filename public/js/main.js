@@ -64,3 +64,5 @@ for (let i = 0; i<questions.length; i+=1) {
         console.log("Mauvaise réponse ! La réponse était : "+ questions[i].reponse);
     }
 }
+
+alert("Tu as répondu juste à "+ score +" questions sur "+ questions.length)
