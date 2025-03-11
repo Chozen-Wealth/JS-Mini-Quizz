@@ -60,4 +60,7 @@ for (let i = 0; i<questions.length; i+=1) {
         console.log("Bonne réponse !");
         score += 1;
     }
+    else {
+        console.log("Mauvaise réponse ! La réponse était : "+ questions[i].reponse);
+    }
 }
