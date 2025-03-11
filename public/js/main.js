@@ -67,7 +67,9 @@ for (let i = 0; i<questions.length; i+=1) {
 
 if (score <= 1) {
     alert("Tu as répondu juste à "+ score +" question sur "+ questions.length)
+    console.log("Tu as répondu juste à "+ score +" question sur "+ questions.length)
 }
 else {
     alert("Tu as répondu juste à "+ score +" questions sur "+ questions.length)
+    console.log("Tu as répondu juste à "+ score +" questions sur "+ questions.length)
 }
