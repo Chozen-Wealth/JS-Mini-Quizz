@@ -41,3 +41,7 @@ const questions = [
         reponse : "Katana"
     },
 ]
+
+// Démarrage message de bienvenue.
+let score = 0
+alert("Bienvenue dans le Quizz au thème de Naruto !")
