@@ -48,4 +48,9 @@ alert("Bienvenue dans le Quizz au thème de Naruto !")
 
 for (let i = 0; i<questions.length; i+=1) {
     let repUser = prompt(questions[i].question);
+    
+    if ( repUser === null) {
+        console.log("Vous avez annulé le Quizz");
+        break;
+    }
 }
