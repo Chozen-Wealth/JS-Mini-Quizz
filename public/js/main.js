@@ -1,43 +1,43 @@
 // Données
 const questions = [
     {
-        question: "Quel est le nom complet du père de Naruto ?",
+        question: "1) Quel est le nom complet du père de Naruto ?",
         reponse : "Minato Namikaze"
     },
     {
-        question: "Quelle est la technique signature de Kakashi Hatake ?",
+        question: "2) Quelle est la technique signature de Kakashi Hatake ?",
         reponse : "Chidori"
     },
     {
-        question: "Comment s'appelle le démon renard scellé en Naruto ?",
+        question: "3) Comment s'appelle le démon renard scellé en Naruto ?",
         reponse : "Kurama"
     },
     {
-        question: "Quel est le nom du village caché de Naruto ?",
+        question: "4) Quel est le nom du village caché de Naruto ?",
         reponse : "Konoha"
     },
     {
-        question: "Qui est le premier Hokage de Konoha ?",
+        question: "5) Qui est le premier Hokage de Konoha ?",
         reponse : "Hashirama"
     },
     {
-        question: "Quel est le dojutsu du clan Uchiha ?",
+        question: "6) Quel est le dojutsu du clan Uchiha ?",
         reponse : "Sharingan"
     },
     {
-        question: "Comment s'appelle l'organisation criminelle à laquelle appartient Itachi ?",
+        question: "7) Comment s'appelle l'organisation criminelle à laquelle appartient Itachi ?",
         reponse : "Akatsuki"
     },
     {
-        question: "Qui est le maître de Jiraiya et Tsunade ?",
+        question: "8) Qui est le maître de Jiraiya et Tsunade ?",
         reponse : "Hiruzen"
     },
     {
-        question: "Quel est le nom du frère cadet d'Itachi ?",
+        question: "9) Quel est le nom du frère cadet d'Itachi ?",
         reponse : "Sasuke"
     },
     {
-        question: "Quel est le nom de l'arme utilisée par Sasuke Uchiha pendant sa quête de vengeance ?",
+        question: "10) Quel est le nom de l'arme utilisée par Sasuke Uchiha pendant sa quête de vengeance ?",
         reponse : "Katana"
     },
 ]
