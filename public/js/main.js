@@ -45,3 +45,7 @@ const questions = [
 // Démarrage message de bienvenue.
 let score = 0
 alert("Bienvenue dans le Quizz au thème de Naruto !")
+
+for (let i = 0; i<questions.length; i+=1) {
+    let repUser = prompt(questions[i].question);
+}
