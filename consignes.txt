@@ -1,17 +1,17 @@
-Mini Quizz en Javascript
+Mini Quizz en Javascript FAIT.
 
-Nom : JS-Mini-Quizz
-Thème : 
-Questions : Minimum 10
-Affichage du score : 
+Nom : JS-Mini-Quizz FAIT.
+Thème : Naruto FAIT.
+Questions : Minimum 10 FAIT.
+Affichage du score : FAIT.
 
 Présentation de la page
-    Titre principal
-    Header
-    Footer
+    Titre principal FAIT.
+    Header FAIT.
+    Footer FAIT.
 Stockage du projet sur GitHub : Minimum 10 Commits
 
-Le quizz démarre et pose les questions.
-Les réponses sont écrites par l'utilisateur dans la console
-Les points sont comptés.
-A la fin du jeu : Alerte avec le score et la fin du Quizz
+Le quizz démarre et pose les questions. FAIT.
+Les réponses sont écrites par l'utilisateur dans la console FAIT.
+Les points sont comptés. FAIT.
+A la fin du jeu : Alerte avec le score et la fin du Quizz FAIT.
