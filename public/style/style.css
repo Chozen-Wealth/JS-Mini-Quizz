@@ -1,4 +1,5 @@
 body {
+    font-family: monospace;
     margin: 0;
     padding: 0;
     background-image: url(../assets/images/Kakashi1.jpg);
@@ -14,14 +15,49 @@ header {
     width: 100%;
     background-color: rgba(220, 220, 220, 0.5);
     display: flex;
-    justify-content: start;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
-section {
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+main {
     height: 400px;
     width: 100%;
+    padding: 50px;
+    background-color: rgba(255, 162, 0, 0.415);
 }
+
+.container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    height: 100px;
+    width: 400px;
+}
+
+.input-button {
+    display: flex;
+    width: 80%;
+    gap: 10px;
+}
+
+.button {
+    background-color: orange;
+    border: none;
+    cursor: pointer;
+}
+
 
 footer {
     background-color: whitesmoke;
@@ -34,7 +70,6 @@ footer {
 
 h1 {
     margin: 0;
-    margin-left: 20px;
 }
 
 p {
