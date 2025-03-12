@@ -73,3 +73,44 @@
 //     alert("Tu as répondu juste à "+ score +" questions sur "+ questions.length)
 //     console.log("Tu as répondu juste à "+ score +" questions sur "+ questions.length)
 // }
+
+let sections = document.querySelectorAll("section")
+
+console.log(sections[0])
+let options = sections[0].querySelectorAll(".options")
+console.log(options)
+
+function win() {
+    sections[0].innerHTML = "GAGNÉ !"
+    sections[0].style.border="2px solid rgb(0, 194, 0)"
+    sections[0].style.backgroundColor="rgb(144, 255, 144)"
+    sections[0].style.fontWeight="bold"
+}
+
+function lose() {
+    sections[0].innerHTML = "PERDU !"
+    sections[0].style.border="2px solid rgb(194, 0, 0)"
+    sections[0].style.backgroundColor="rgb(255, 144, 144)"
+    sections[0].style.fontWeight="bold"
+}
+
+switch (true) {
+    case options[0].addEventListener("click", ()=> {
+        win()
+    }):
+        break;
+        
+    case options[1].addEventListener("click", ()=> {
+        lose()
+    }):
+        break;
+    case options[2].addEventListener("click", ()=> {
+        lose()
+    }):
+        break;
+    case options[3].addEventListener("click", ()=> {
+        lose()
+    }):
+        break;
+    default:
+}
