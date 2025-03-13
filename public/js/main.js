@@ -1,3 +1,194 @@
+let questions = [
+    {
+        num: 1,
+        question: "Quel est le nom complet du père de Naruto ?",
+        reponse: "Minato Namikaze",
+        options: [
+            "Minato Namikaze",
+            "Akuzo Namikaze",
+            "Minato Uchiha",
+            "Minato Konoha"
+        ]
+    },
+    {
+        num: 2,
+        question: "Quelle est la technique signature de Kakashi Hatake ?",
+        reponse: "Chidori",
+        options: [
+            "Rasengan",
+            "Amaterasu",
+            "Chidori",
+            "Susanoo"
+        ]
+    },
+    {
+        num: 3,
+        question: "Comment s'appelle le démon renard scellé en Naruto ?",
+        reponse: "Kurama",
+        options: [
+            "Shukaku",
+            "Kurama",
+            "Gyūki",
+            "Matatabi"
+        ]
+    },
+    {
+        num: 4,
+        question: "Quel est le nom du village caché de Naruto ?",
+        reponse: "Konoha",
+        options: [
+            "Suna",
+            "Iwa",
+            "Konoha",
+            "Kiri"
+        ]
+    },
+    {
+        num: 5,
+        question: "Qui est le premier Hokage de Konoha ?",
+        reponse: "Hashirama",
+        options: [
+            "Tobirama",
+            "Hashirama",
+            "Hiruzen",
+            "Minato"
+        ]
+    },
+    {
+        num: 6,
+        question: "Quel est le dojutsu du clan Uchiha ?",
+        reponse: "Sharingan",
+        options: [
+            "Byakugan",
+            "Rinnegan",
+            "Sharingan",
+            "Tenseigan"
+        ]
+    },
+    {
+        num: 7,
+        question: "Comment s'appelle l'organisation criminelle à laquelle appartient Itachi ?",
+        reponse: "Akatsuki",
+        options: [
+            "Kara",
+            "Akatsuki",
+            "Anbu",
+            "Oto"
+        ]
+    },
+    {
+        num: 8,
+        question: "Qui est le maître de Jiraiya et Tsunade ?",
+        reponse: "Hiruzen",
+        options: [
+            "Hiruzen",
+            "Hashirama",
+            "Orochimaru",
+            "Danzo"
+        ]
+    },
+    {
+        num: 9,
+        question: "Quel est le nom du frère cadet d'Itachi ?",
+        reponse: "Sasuke",
+        options: [
+            "Madara",
+            "Sasuke",
+            "Shisui",
+            "Obito"
+        ]
+    },
+    {
+        num: 10,
+        question: "Quel est le nom de l'arme utilisée par Sasuke Uchiha pendant sa quête de vengeance ?",
+        reponse: "Katana",
+        options: [
+            "Fuma Shuriken",
+            "Katana",
+            "Kunaï",
+            "Éventail"
+        ]
+    },
+];
+
+
+let usernamerep = prompt("Entrez votre nom d'utilisateur :");
+console.log(usernamerep);
+
+let username = document.querySelector("#username");
+username.innerText = usernamerep;
+
+const boxQuizz = document.querySelector(".box-quizz");
+let questionCount = 0;
+let userScore = 0;
+
+const boutonNext = document.querySelector(".bouton-next")
+
+afficherQuestions(0)
+boutonNext.addEventListener("click", ()=> {
+    if (questionCount < questions.length - 1) {
+        questionCount++;
+        afficherQuestions(questionCount);
+    }
+    else {
+        console.log("Questions Complétées.")
+    }
+    boutonNext.classList.remove("active");
+})
+
+
+function afficherQuestions(index) {
+    const listeOptions = document.querySelector(".liste-options");
+    const questionText = document.querySelector(".question-text");
+    questionText.textContent = `${questions[index].num}) ${questions[index].question}`;
+    
+    let optionTag = `<div class="option"><span>${questions[index].options[0]}</span></div>
+    <div class="option"><span>${questions[index].options[1]}</span></div>
+    <div class="option"><span>${questions[index].options[2]}</span></div>
+    <div class="option"><span>${questions[index].options[3]}</span></div>`;
+    
+    listeOptions.innerHTML = optionTag;
+    
+    const option = document.querySelectorAll(".option");
+    for ( let i = 0; i < option.length; i++) {
+        option[i].setAttribute("onclick", "optionChoisie(this)");
+    }
+}
+
+function optionChoisie(reponse) {
+    const listeOptions = document.querySelector(".liste-options");
+    let userReponse = reponse.textContent;
+    let bonneReponse = questions[questionCount].reponse;
+    let allOptions = listeOptions.children.length;
+    
+    if (userReponse == bonneReponse) {
+        reponse.classList.add("correct");
+        userScore+=1
+        userScoreFonction()
+    }
+    else {
+        reponse.classList.add("incorrect");
+        
+        for (let i = 0; i < allOptions; i++) {
+            if (listeOptions.children[i].textContent == bonneReponse) {
+                listeOptions.children[i].classList.add("correct")
+            }
+        }
+    }
+    
+    for (let i = 0; i < allOptions; i++) {
+        listeOptions.children[i].classList.add("desactiver");
+    }
+    boutonNext.classList.add("active");
+}
+
+function userScoreFonction() {
+    const userScoreText = document.querySelector(".userscore");
+    userScoreText.innerText = userScore;
+}
+
+
+
 // // Données
 // const questions = [
 //     {
@@ -73,44 +264,3 @@
 //     alert("Tu as répondu juste à "+ score +" questions sur "+ questions.length)
 //     console.log("Tu as répondu juste à "+ score +" questions sur "+ questions.length)
 // }
-
-let sections = document.querySelectorAll("section")
-
-console.log(sections[0])
-let options = sections[0].querySelectorAll(".options")
-console.log(options)
-
-function win() {
-    sections[0].innerHTML = "GAGNÉ !"
-    sections[0].style.border="2px solid rgb(0, 194, 0)"
-    sections[0].style.backgroundColor="rgb(144, 255, 144)"
-    sections[0].style.fontWeight="bold"
-}
-
-function lose() {
-    sections[0].innerHTML = "PERDU !"
-    sections[0].style.border="2px solid rgb(194, 0, 0)"
-    sections[0].style.backgroundColor="rgb(255, 144, 144)"
-    sections[0].style.fontWeight="bold"
-}
-
-switch (true) {
-    case options[0].addEventListener("click", ()=> {
-        win()
-    }):
-        break;
-        
-    case options[1].addEventListener("click", ()=> {
-        lose()
-    }):
-        break;
-    case options[2].addEventListener("click", ()=> {
-        lose()
-    }):
-        break;
-    case options[3].addEventListener("click", ()=> {
-        lose()
-    }):
-        break;
-    default:
-}

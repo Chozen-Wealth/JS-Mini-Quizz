@@ -9,26 +9,36 @@
 <body>
     <header>
         <h1>Quizz Naruto</h1>
-        <div class="header-container">
-            <div id="div-gauche">
-                <h4>Bienvenue <span id="user">User</span> !</h4>
-            </div>
-            <div id="div-droite">
-                <h4>Ton score actuel : <span id="score">Score</span></h4>
-            </div>
-        </div>
     </header>
     <main>
-        <section class="container">
-            <p class="question">1) Quel est le nom complet du père de Naruto ?</p>
-            <div class="grid1">
-                <div class="options option1">Minato Namikaze</div>
-                <div class="options option2">Akuzo Namikaze</div>
+        <section class="box-quizz">
+            <div class="user-quizz">
+                <p>Bienvenue <span id="username">Anonyme</span> !</p>
+                <p>Ton score actuel : <span class="userscore">0</span></p>
             </div>
-            <div class="grid2">
-                <div class="options option3">Minato Uchiha</div>
-                <div class="options option4">Minato L'éclair Jaune</div>
+            <p class="question-text">1) Quel est le nom complet du père de Naruto ?</p>
+            <div class="liste-options">
+                <div class="option">
+                    <span>Minato Namikaze</span>
+                </div>
+                <div class="option">
+                    <span>Akuzo Namikaze</span>
+                </div>
+                <div class="option">
+                    <span>Minato Uchiha</span>
+                </div>
+                <div class="option">
+                    <span>Minato L'éclair Jaune</span>
+                </div>
             </div>
+            <div class="quizz-footer">
+                <button class="bouton-next">Suivant</button>
+            </div>
+        </section>
+        <section class="box-result">
+            <h2>Résultat du Quizz</h2>
+            <p>Votre score finale est de <span class="userscorefinale">0</span>/10</p>
+
         </section>
     </main>
     <Footer>
