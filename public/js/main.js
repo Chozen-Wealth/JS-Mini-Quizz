@@ -1,3 +1,4 @@
+// Collection de toutes les questions avec leurs réponses et leurs options.
 let questions = [
     {
         num: 1,
@@ -110,23 +111,25 @@ let questions = [
         ]
     },
 ];
-const boxResultat = document.querySelector(".box-result")
-let scoreFinale = document.querySelector(".userscorefinale")
 
-
+// Demande à l'utilisateur d'entrer son nom et le ré-écrire dans le HTML.
 let usernamerep = prompt("Entrez votre nom d'utilisateur :");
-console.log(usernamerep);
-
 let username = document.querySelector("#username");
 username.innerText = usernamerep;
 
+// Déclaration des variables utiles.
 const boxQuizz = document.querySelector(".box-quizz");
+const boxResultat = document.querySelector(".box-result")
+const boutonNext = document.querySelector(".bouton-next")
+let scoreFinale = document.querySelector(".userscorefinale")
 let questionCount = 0;
 let userScore = 0;
 
-const boutonNext = document.querySelector(".bouton-next")
 
+// Appel de la fonction pour afficher la première question
 afficherQuestions(0)
+
+// Event lors du click sur le bouton Next
 boutonNext.addEventListener("click", ()=> {
     if (questionCount < questions.length - 1) {
         questionCount++;
@@ -140,7 +143,7 @@ boutonNext.addEventListener("click", ()=> {
     boutonNext.classList.remove("active");
 })
 
-
+// Fonction d'affichage de la question selon l'index dans la collection.
 function afficherQuestions(index) {
     const listeOptions = document.querySelector(".liste-options");
     const questionText = document.querySelector(".question-text");
@@ -159,6 +162,7 @@ function afficherQuestions(index) {
     }
 }
 
+// Fonction pour afficher l'option choisie (correcte ou fausse).
 function optionChoisie(reponse) {
     const listeOptions = document.querySelector(".liste-options");
     let userReponse = reponse.textContent;
@@ -187,89 +191,15 @@ function optionChoisie(reponse) {
     boutonNext.classList.add("active");
 }
 
+// Fonction pour afficher le score de l'utilisateur.
 function userScoreFonction() {
     const userScoreText = document.querySelector(".userscore");
     userScoreText.innerText = userScore;
     scoreFinale.innerText = userScore;
 }
 
+// Fonction pour cacher la première boîte à questions et afficher la boîte des résultats.
 function afficherResultat() {
     boxQuizz.classList.add("cacher")
     boxResultat.classList.remove("cacher")
 }
-
-// // Données
-// const questions = [
-//     {
-//         question: "1) Quel est le nom complet du père de Naruto ?",
-//         reponse : "Minato Namikaze"
-//     },
-//     {
-//         question: "2) Quelle est la technique signature de Kakashi Hatake ?",
-//         reponse : "Chidori"
-//     },
-//     {
-//         question: "3) Comment s'appelle le démon renard scellé en Naruto ?",
-//         reponse : "Kurama"
-//     },
-//     {
-//         question: "4) Quel est le nom du village caché de Naruto ?",
-//         reponse : "Konoha"
-//     },
-//     {
-//         question: "5) Qui est le premier Hokage de Konoha ?",
-//         reponse : "Hashirama"
-//     },
-//     {
-//         question: "6) Quel est le dojutsu du clan Uchiha ?",
-//         reponse : "Sharingan"
-//     },
-//     {
-//         question: "7) Comment s'appelle l'organisation criminelle à laquelle appartient Itachi ?",
-//         reponse : "Akatsuki"
-//     },
-//     {
-//         question: "8) Qui est le maître de Jiraiya et Tsunade ?",
-//         reponse : "Hiruzen"
-//     },
-//     {
-//         question: "9) Quel est le nom du frère cadet d'Itachi ?",
-//         reponse : "Sasuke"
-//     },
-//     {
-//         question: "10) Quel est le nom de l'arme utilisée par Sasuke Uchiha pendant sa quête de vengeance ?",
-//         reponse : "Katana"
-//     },
-// ]
-
-// // Démarrage message de bienvenue.
-// let score = 0
-// alert("Bienvenue dans le Quizz au thème de Naruto !")
-
-// for (let i = 0; i<questions.length; i+=1) {
-//     let repUser = prompt(questions[i].question);
-
-//     if ( repUser === null) {
-//         console.log("Vous avez annulé le Quizz");
-//         break;
-//     }
-
-//     repUser = repUser.toLowerCase();
-
-//     if (repUser.includes(questions[i].reponse.toLowerCase())) {
-//         console.log("Bonne réponse !");
-//         score += 1;
-//     }
-//     else {
-//         console.log("Mauvaise réponse ! La réponse était : "+ questions[i].reponse);
-//     }
-// }
-
-// if (score <= 1) {
-//     alert("Tu as répondu juste à "+ score +" question sur "+ questions.length)
-//     console.log("Tu as répondu juste à "+ score +" question sur "+ questions.length)
-// }
-// else {
-//     alert("Tu as répondu juste à "+ score +" questions sur "+ questions.length)
-//     console.log("Tu as répondu juste à "+ score +" questions sur "+ questions.length)
-// }
