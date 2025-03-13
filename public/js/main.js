@@ -110,6 +110,8 @@ let questions = [
         ]
     },
 ];
+const boxResultat = document.querySelector(".box-result")
+let scoreFinale = document.querySelector(".userscorefinale")
 
 
 let usernamerep = prompt("Entrez votre nom d'utilisateur :");
@@ -132,7 +134,9 @@ boutonNext.addEventListener("click", ()=> {
     }
     else {
         console.log("Questions Complétées.")
+        afficherResultat()
     }
+    
     boutonNext.classList.remove("active");
 })
 
@@ -176,6 +180,7 @@ function optionChoisie(reponse) {
         }
     }
     
+    
     for (let i = 0; i < allOptions; i++) {
         listeOptions.children[i].classList.add("desactiver");
     }
@@ -185,9 +190,13 @@ function optionChoisie(reponse) {
 function userScoreFonction() {
     const userScoreText = document.querySelector(".userscore");
     userScoreText.innerText = userScore;
+    scoreFinale.innerText = userScore;
 }
 
-
+function afficherResultat() {
+    boxQuizz.classList.add("cacher")
+    boxResultat.classList.remove("cacher")
+}
 
 // // Données
 // const questions = [
