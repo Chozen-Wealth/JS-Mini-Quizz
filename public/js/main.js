@@ -113,9 +113,20 @@ let questions = [
 ];
 
 // Demande à l'utilisateur d'entrer son nom et le ré-écrire dans le HTML.
-let usernamerep = prompt("Entrez votre nom d'utilisateur :");
-let username = document.querySelector("#username");
-username.innerText = usernamerep;
+let username = document.getElementById("username");
+let espaceInput = document.getElementById("espaceInput");
+let buttonInput = document.getElementById("buttonInput");
+let boxInput = document.querySelector(".boxInput");
+
+function enregistrerUsername() {
+    username.innerText = espaceInput.value;
+}
+
+buttonInput.addEventListener("click", ()=> {
+    enregistrerUsername();
+    boxInput.classList.add("cacher");
+    boxQuizz.classList.remove("cacher")
+})
 
 // Déclaration des variables utiles.
 const boxQuizz = document.querySelector(".box-quizz");
